@@ -12,7 +12,8 @@ module.exports = app => {
     return;
   }
 
-  process.nextTick(() => {
+  // stub at nextTick to make sure origin is injected.
+  app.beforeStart(() => {
     const mapping = app.config.stub.mapping;
 
     function log(type, objPaths, filePath) {
@@ -58,6 +59,7 @@ module.exports = app => {
             class StubClass extends targetClass {
               constructor(...args) {
                 super(...args);
+                // so plugin like egg-grpc which register methods at constructor could also be stub.
                 utils.stub(this, stubExports);
               }
             }

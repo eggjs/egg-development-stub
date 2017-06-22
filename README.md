@@ -79,6 +79,8 @@ module.exports = app => {
 
 In general, you can stub with commonjs exports:
 
+> Note: if stub fn return `undefined`, then will call origin fn.
+
 ```js
 // app/stub/service/test.js
 exports.echo = () => 'stub fn';
