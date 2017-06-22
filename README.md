@@ -43,6 +43,18 @@ exports.stub = {
 
 ## Configuration
 
+Put your stub file at `app/stub/{type}/**/*.js`.
+
+```bash
+egg-example
+└── app
+    ├── service
+    │   └── test.js
+    └── stub
+       └── service
+           └── test.js
+```
+
 Support stub `service/grpc` by default, you can config `mapping` to others.
 
 ```js
