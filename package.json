@@ -1,0 +1,62 @@
+{
+  "name": "egg-development-stub",
+  "version": "1.0.0",
+  "description": "stub service/proxy/... for egg development",
+  "eggPlugin": {
+    "name": "stub"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "dependencies": {
+    "co": "^4.6.0",
+    "is-type-of": "^1.0.0",
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2"
+  },
+  "devDependencies": {
+    "autod": "^2.8.0",
+    "autod-egg": "^1.0.0",
+    "egg": "^1.5.0",
+    "egg-bin": "^4.0.4",
+    "egg-ci": "^1.8.0",
+    "egg-grpc": "^1.0.0",
+    "egg-mock": "^3.8.0",
+    "eslint": "^4.0.0",
+    "eslint-config-egg": "^4.2.1",
+    "supertest": "^3.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "config",
+    "app.js",
+    "lib"
+  ],
+  "ci": {
+    "version": "6, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-development-stub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-development-stub#readme",
+  "author": "TZ <atian25@qq.com>",
+  "license": "MIT"
+}
