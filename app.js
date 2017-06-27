@@ -8,7 +8,6 @@ const utils = require('./lib/utils');
 
 module.exports = app => {
   if (app.config.env === 'prod') {
-    app.coreLogger.error('[egg-development-stub] not allow to stub at prod mode.');
     return;
   }
 

@@ -1,3 +1,3 @@
 'use strict';
 
-exports.echo = () => 'abc';
+exports.echo = () => Promise.resolve('abc');
