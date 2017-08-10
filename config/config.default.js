@@ -12,7 +12,7 @@ module.exports = appInfo => {
    * @property {Object} mapping - stub target mapping
    */
   config.stub = {
-    dir: path.join(appInfo.baseDir, 'stub'),
+    dir: path.join(appInfo.baseDir, 'app/stub'),
     mapping: {
       service: 'serviceClasses',
       grpc: 'grpcClasses',

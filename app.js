@@ -21,7 +21,7 @@ module.exports = app => {
 
     // load stub files and inject
     new app.loader.FileLoader({
-      directory: path.join(app.config.baseDir, 'app/stub'),
+      directory: app.config.stub.dir,
       call: false,
       caseStyle: 'lower',
       override: true,
