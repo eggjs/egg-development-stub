@@ -61,7 +61,7 @@ Support stub `service/grpc` by default, you can config `mapping` to others.
 // {app_root}/config/config.default.js
 config.stub = {
   // stub files root dir
-  // dir: path.join(appInfo.baseDir, 'stub'),
+  // dir: path.join(appInfo.baseDir, 'app/stub'),
 
   // stub target mapping
   // mapping: {
